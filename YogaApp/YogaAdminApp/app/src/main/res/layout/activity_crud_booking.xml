@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    tools:context=".activity.CRUDBookingActivity">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Back"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:paddingTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintWidth_max="600dp">
+
+        <TextView
+            android:id="@+id/courseTextView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="Course"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/courseSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/courseSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_weight="0.5"
+            android:paddingTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/courseTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/courseTextView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/classInstanceTextView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="Class Instance"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/classInstanceSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courseTextView" />
+
+        <Spinner
+            android:id="@+id/classInstanceSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_weight="0.5"
+            android:paddingTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/classInstanceTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/classInstanceTextView" />
+
+
+        <EditText
+            android:id="@+id/userEmailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:hint="User Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="6dp"
+            android:textSize="18dp"
+            app:layout_constraintTop_toBottomOf="@id/classInstanceTextView" />
+
+        <EditText
+            android:id="@+id/bookingDateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:hint="Booking Date (e.g. 17/10/2024)"
+            android:inputType="date"
+            android:paddingStart="6dp"
+            android:textSize="18dp"
+            app:layout_constraintTop_toBottomOf="@id/userEmailEditText" />
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginVertical="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="Status"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/statusSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bookingDateEditText" />
+
+        <Spinner
+            android:id="@+id/statusSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_weight="0.5"
+            android:paddingTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/statusTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/statusTextView"
+            app:layout_constraintTop_toTopOf="@+id/statusTextView" />
+
+        <Button
+            android:id="@+id/addBookingButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Add Booking"
+            app:layout_constraintEnd_toStartOf="@id/clearBookingButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusSpinner" />
+
+        <Button
+            android:id="@+id/clearBookingButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:layout_marginStart="8dp"
+            android:text="Clear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/addBookingButton"
+            app:layout_constraintTop_toBottomOf="@id/statusSpinner" />
+
+        <Button
+            android:id="@+id/updateBookingButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Update Booking"
+            app:layout_constraintEnd_toStartOf="@id/deleteBookingButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addBookingButton" />
+
+        <Button
+            android:id="@+id/deleteBookingButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:layout_marginStart="8dp"
+            android:text="Delete Booking"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/updateBookingButton"
+            app:layout_constraintTop_toBottomOf="@id/clearBookingButton" />
+
+        <ListView
+            android:id="@+id/bookingListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/updateBookingButton" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clearBookingButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

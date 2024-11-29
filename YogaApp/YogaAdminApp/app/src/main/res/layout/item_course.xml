@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Horizontal layout for Course Details section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp">
+
+        <!-- Course Details Text -->
+        <TextView
+            android:id="@+id/courseDetailsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Course Details"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- View Details Button -->
+        <Button
+            android:id="@+id/viewClassInstancesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Schedule" />
+
+    </LinearLayout>
+
+</LinearLayout>
